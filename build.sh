@@ -34,7 +34,7 @@ mv ./core/dnp3_dummy.cpp ./core/dnp3_dummy.disabled 2> /dev/null
 cp -f ./core/core_builders/dnp3_enabled/*.* ./core/core_builders/
 
 #make sure cmake is installed
-sudo apt-get install cmake
+apt-get install cmake
 
 #download opendnp3
 #git clone --recursive https://github.com/automatak/dnp3.git
@@ -56,6 +56,13 @@ sudo apt-get install cmake
 #swapoff swapfile
 #rm -f ./swapfile
 #cd ..
+
+#-----------------------
+echo Skipping DNP3 installation
+mv ./core/dnp3.cpp ./core/dnp3.disabled 2> /dev/null
+mv ./core/dnp3_dummy.disabled ./core/dnp3_dummy.cpp 2> /dev/null
+cp -f ./core/core_builders/dnp3_disabled/*.* ./core/core_builders/
+#-----------------------
 
 cd core
 rm -f ./hardware_layer.cpp
