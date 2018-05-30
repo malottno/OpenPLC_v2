@@ -75,4 +75,3 @@ echo [OPENPLC]
 cd ..
 ./build_core.sh
 		
-done
