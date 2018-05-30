@@ -38,26 +38,25 @@ sudo apt-get install cmake
 
 #download opendnp3
 #git clone --recursive https://github.com/automatak/dnp3.git
-cd dnp3
+#cd dnp3
 
 #create swapfile to prevent out of memory errors
-echo creating swapfile...
-dd if=/dev/zero of=swapfile bs=1M count=1000
-mkswap swapfile
-swapon swapfile
+#echo creating swapfile...
+#dd if=/dev/zero of=swapfile bs=1M count=1000
+#mkswap swapfile
+#swapon swapfile
 
 #build opendnp3
-cmake ../dnp3
-make
-make install
-ldconfig
+#cmake ../dnp3
+#make
+#make install
+#ldconfig
 
 #remove swapfile
-swapoff swapfile
-rm -f ./swapfile
-cd ..
+#swapoff swapfile
+#rm -f ./swapfile
+#cd ..
 
-fi
 cd core
 rm -f ./hardware_layer.cpp
 rm -f ../build_core.sh
